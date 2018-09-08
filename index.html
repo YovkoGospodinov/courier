@@ -148,7 +148,64 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+                <h2>Изчисли цена на пратка</h2>
+                <div class="calculatorContainer">
+                    <p class="error" id="errorsTitle">
+                        <strong>Невалидни данни</strong>
+                    </p>
+                    <p class="error" id="zeroDimensionError">Моля коригирайте стойността. Нула не е валиден размер.</p>
+                    <p class="error" id="missingDimensionError">Моля добавете стойността.</p>
+                    <div class="packageType">
+                        <div class="unit_headline">Вид пратка</div>
+                        <div class="radio_space">
+                            <input type="radio" name="package" id="volumetric_weight_01" class="box volumetric_weight_radio" value="box" checked="checked" onclick="setPackageTypeConfigs(this.value);">
+                            <label for="volumetric_weight_01" class="radio_input">Пакет</label>
+                            <input type="radio" name="package" id="volumetric_weight_02" class="envelope volumetric_weight_radio" value="envelope" onclick="setPackageTypeConfigs(this.value);">
+                            <label for="volumetric_weight_02" class="radio_input">Документи до 200гр.</label>
+                        </div>
+                    </div>
+                    <div class="unit">
+                        <div class="unitMeasures">
+                            <div class="measuresBox">
+                                <strong id="labelLength" for="length">Дължина</strong>
+                                <input id="length" type="number" value="0" onkeypress="return isValidNumericInput(event);"> <strong id="unitLength">см</strong>
+                            </div>
+                            <div class="measuresBox">
+                                <strong id="labelWidth" for="width">Ширина</strong>
+                                <input id="width" type="number" value="0" onkeypress="return isValidNumericInput(event);"> <strong id="unitWidth">см</strong>
+                            </div>
+                            <div class="measuresBox">
+                                <strong id="labelHigh" for="high">Височина</strong>
+                                <input id="high" type="number" value="0" onkeypress="return isValidNumericInput(event);"> <strong id="unitHigh">см</strong>
+                            </div>
+                            <div class="measuresBox">
+                                <strong for="weight">Тегло</strong>
+                                <input id="weight" type="number" value="0" onkeypress="return isValidNumericInput(event);"> <strong id="unitWeight">кг</strong>
+                            </div>
+                            <strong for="time">Срок</strong>
+                            <select id="time">
+                                <option value="1">Следващ ден</option>
+                                <option value="2">До края на деня</option>
+                                <option value="3">3 часа</option>
+                                <option value="4">90 минути</option>
+                            </select>
+                        </div>
+                        <div class="unitPictures">
+                            <div id="smallBox"></div>
+                            <div id="smallEnvelope"></div>
+                        </div>
+                    </div>
+                    <button id="button" onclick="calculate(this.value)">Изчисли</button>
+                    <div class="vertical_line"></div>
+                    <div id="resultMessage"></div>
+                    <div class="result">
+                        <div>
+                            <label for="vm_result" class="result_input">Обща стоност на пратката.</label>
+                            <strong id="resultValue">0</strong>
+                            <span id="resultCurrency">лв.</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- /.row -->
@@ -295,6 +352,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 
 </body>
 
