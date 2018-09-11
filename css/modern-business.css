@@ -76,3 +76,32 @@ body {
 #resultMessage {
     color: red
 }
+
+body {
+    background-color: #111213;
+    color: #afa513
+}
+
+.bg-dark {
+    background-color: #343536!important;
+    color: #afa513
+}
+
+.navbar-dark .navbar-brand {
+    color: #afa513
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #afa513
+}
+
+.form-control {
+    background-color: #343536;
+    color: #afa513
+}
+
+input,
+select {
+    background-color: #343536;
+    color: #afa513
+}
