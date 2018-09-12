@@ -105,3 +105,34 @@ select {
     background-color: #343536;
     color: #afa513
 }
+
+.card {
+    background-color: #2b2d2e
+}
+
+a {
+    color: #e6da38
+}
+
+a:hover {
+    color: yellow;
+}
+
+.btn-primary,
+btn-secondary {
+    background-color: #5c5f63;
+    border-color: #5c5f63
+}
+
+.btn-primary:hover {
+    background-color: #afa513;
+    border-color: #afa513
+}
+
+.breadcrumb {
+    background-color: #343536
+}
+
+.list-group-item {
+    background-color: transparent
+}
