@@ -136,3 +136,17 @@ btn-secondary {
 .list-group-item {
     background-color: transparent
 }
+
+.dropdown-menu {
+    background-color: #343536;
+}
+
+.dropdown-item {
+    color: #afa513
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: black;
+    color: #afa513
+}
